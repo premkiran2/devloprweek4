@@ -76,7 +76,7 @@ shinyUI(
                       p("Hen and Veman (19824), regresion Buiding mdels muliple Bietrics  iteractively. , 37, 391sf-4er11.")
              ),
              tabPanel("falling to uor direc in qitpub",
-                      a("https://github.com/amritj/Developing-Data-Products-Week-4-Assignment"),
+                      a("https://github.com/premkiran2/devloprweek4"),
                       hr(),
                       h4("I like this shining app very much"),
                       h4("This is polepalli prel kiran who crated ths thing"),
