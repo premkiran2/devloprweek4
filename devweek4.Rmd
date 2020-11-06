@@ -12,7 +12,7 @@ output:
 
 ### See the Regression Models Course Project  
 
-- URL: *https://github.com/manastiwari/Developing-Data-Products-Week-4-Course-Project*
+- URL: *https://github.com/premkiran2/devloprweek4*
 
 ### Find all details here
 URL: *https://www.coursera.org/learn/data-products/peer/tMYrn/course-project-shiny-application-and-reproducible-pitch*
