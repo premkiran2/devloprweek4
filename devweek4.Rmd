@@ -1,0 +1,78 @@
+---
+title: "Devweek4"
+author: "Prem Kiran P"
+date: "11/6/2020"
+output:
+  word_document: default
+  html_document: default
+---
+
+
+## Coursera Reproducible Pitch
+
+### See the Regression Models Course Project  
+
+- URL: *https://github.com/manastiwari/Developing-Data-Products-Week-4-Course-Project*
+
+### Find all details here
+URL: *https://www.coursera.org/learn/data-products/peer/tMYrn/course-project-shiny-application-and-reproducible-pitch*
+
+---
+
+## mtcars Dataset
+It took tours for me ti dimokete thud oribrxt.
+i gained a lory id knowledgr
+it nelps stdents in facing new ideas
+### Motor Trend Car Road Tests
+Looking for an opportunity to utilize my technical competencies coupled with my communication, analytical skills and ability to work amicably to convert organizational goals into reality and to work for the growth of the organization.
+Club Membership,Playing Cricket,Watching Youtube Videos,Travelling,
+Business Analytics offered by Verzeo and IIT ROORKEE,BSNL
+Worked on Laser Security System,Worked on Digital Thermometer
+Python,C++,SQL,C
+Database Head for MIT SPORTS CLUB,Database Head for MIT CRICKET LEAGUE,Database Head for MIT BASKETBALL LEAGUE,Database Head for MIT BADMINTON LEAGUE,Organizer for HFS (Hospitality and Food Stalls) during REVELS 2019,Volunteer for Sports Category during Revels 2018,Organizer in MIT Sports Club
+
+Volunteer in MIT Sports Club
+
+```{r}
+library(datasets)
+head(mtcars, 1)
+```
+---
+
+## mtcars Dataset - Format
+**11 variables observed to get a observations of 32 and data frms**
+
+| Index | Field | Detail |
+------- | ----- | ------ |
+| [, 1] | mpg | Miles/(US) gallon |
+| [, 2]  | cyl | no. of cyc |
+| [, 3]	| disp | dist (cu.in.) |
+| [, 4]	| hp | gh |
+| [, 5]	| drat | rar |
+| [, 6]	| wt | mass (lb/1000) |
+| [, 7]	| qsec | 1/4 mt |
+| [, 8]	| vs | V/S |
+| [, 9]	| am | trans(0=auto,1=manu) |
+| [,10]	| gear | nofg |
+| [,11]	| carb | nocar |
+
+---
+
+## Analysis - Main Code
+
+```r
+  ftp <- reactive({
+    paste("mpg ~", "as.integer(", input$variable, ")")  })
+  
+  fit <- reactive({
+    lm(as.formula(ftp()), data=mpgData)  })
+  ...
+  output$fit <- renderPrint({
+    summary(fit()) })
+  
+  output$mpgPlot <- renderPlot({
+    with(mpgData, {
+      plot(as.formula(ftp()))
+      abline(fit(), col=2)
+    })  })
+```
